@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" verbose="0">
+  <listeners>
+    <listener class-name="rahulshettyacademy.TestComponents.Listeners"/>
+  </listeners>
+  <test parallel="tests" name="Error Validations Test(failed)" preserve-order="true">
+    <classes>
+      <class name="rahulshettyacademy.tests.ErrorValidationsTest">
+        <methods>
+          <include name="LoginErrorValidation"/>
+          <include name="tearDown"/>
+          <include name="ProductErrorValidation"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- rahulshettyacademy.tests.ErrorValidationsTest -->
+      <class name="rahulshettyacademy.tests.SubmitOrderTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- rahulshettyacademy.tests.SubmitOrderTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+  <test parallel="tests" name="Submit Order Test(failed)" preserve-order="true">
+    <classes>
+      <class name="rahulshettyacademy.tests.ErrorValidationsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- rahulshettyacademy.tests.ErrorValidationsTest -->
+      <class name="rahulshettyacademy.tests.SubmitOrderTest">
+        <methods>
+          <include name="OrderHistoryTest"/>
+          <include name="tearDown"/>
+          <include name="submitOrder"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- rahulshettyacademy.tests.SubmitOrderTest -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

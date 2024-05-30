@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Loan Department" parallel="tests" thread-count="5">
+    
+	<test name="personalLoan" thread-count="5">
+
+		<parameter name="URL" value="kamalmishra.com" />
+		<parameter name="UserName" value="kmishra" />
+		<parameter name="Pass" value="1234567" />
+		<classes>
+
+			<class name="testNg.base2">
+				<methods>
+					<include name="personalloan" />
+				</methods>
+			</class>
+			<class name="testNg.base1" />
+			<class name="testNg.base5" />
+		</classes>
+	</test>
+	<test name="Carloan">
+		<parameter name="URL" value="opus.com" />
+		<classes>
+			<class name="testNg.base4">
+				<!--<methods>
+					<exclude name="cricket.*">					
+					</exclude>
+				</methods>-->
+			</class>
+			<class name="testNg.base3">
+				<methods>
+					<exclude name="trafficmumbai" />
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+</suite> 
